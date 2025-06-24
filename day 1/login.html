@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>logIN-page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(46, 51, 51);
+            font-family: Arial, sans-serif;
+            height: 100vh;
+        }   
+
+        .navbar {
+            background-color: aqua;
+            text-align: start;
+            padding: 10px;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            width: 400px;
+            margin: 50px auto;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            border-radius: 8px;
+            background-color: rgb(182, 251, 255);
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            font-size: 20px;
+        }
+
+        .btn {
+            background-color: rgb(65, 65, 65);
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        } 
+        .name,.password{
+            display: flex;
+            gap: 10px;
+        }
+
+    </style>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+</head>
+
+<body>
+    <nav class="navbar">
+        <h1>logo</h1>
+    </nav>
+    <div class="container">
+        <form action="">
+            <h2>Log In</h2>
+            <div class="name">
+                <label for="username">Username:</label>
+                <input type="text" id="username" class="form-control" name="username" required>
+            </div>
+            <div class="password">
+                <label for="password">Password:</label>
+                <input type="password" id="password" class="form-control" name="password" required>
+            </div>
+            <div class="submit">
+                <button type="submit" class="btn">Log In</button>
+            </div>
+
+        </form>
+    </div>
+</body>
+
+</html>
