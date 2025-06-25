@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-Demo</title>
+    <!-- <script>
+        alert("we are the champions");
+           let age =  prompt("Enter your age");
+           if(age >=0 && age <=10){
+             alert("your age is btw 0 to 10");
+           }
+           else if(age >10 && age <=20){
+             alert("your age is btw 10 to 20");
+           }
+           else if(age >20 && age <=30){
+             alert("your age is btw 20 to 30");
+           }
+           else if(age >30 && age <=40){
+             alert("your age is btw 30 to 40");
+           }
+           else{
+             alert("your age is btw 40 to 100");
+           }
+
+    </script> -->
+   
+</head>
+
+<body>
+    <form action="">
+        <select name="gender" id="gender" onchange="checkGender()">
+            <option value="">select your gender</option>
+            <option value="male" >Male </option>
+            <option value="female" >Female </option>
+        </select>
+        <img src="male.png" alt="" id="male" style="display: none;">
+        <img src="female.png" alt="" id="female" style="display: none;">
+      
+    </form>
+
+    <script>
+        function checkGender(){
+            let checkGender = document.getElementById("gender").value;
+            if(checkGender == "male"){
+                document.getElementById("male").style.display = "block";
+              document.getElementById("female").style.display = "none";   
+            }
+            else if(checkGender == "female"){
+                document.getElementById("female").style.display = "block";
+                document.getElementById("male").style.display = "none";         
+            }
+            else{
+                document.getElementById("female").style.display = "none";
+                document.getElementById("male").style.display = "none";
+            }
+        }
+       
+    </script>
+</body>
+</html>

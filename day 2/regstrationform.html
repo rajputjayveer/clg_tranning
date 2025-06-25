@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            background-color: rgb(207, 207, 207);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        form{
+            max-width: 500px;
+            margin: auto;
+            background-color: #a0a0a0;
+            padding: 20px 50px;
+            box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.981);
+            border-radius: 0px 50px 50px 0px;
+            
+        }
+         label{
+            font-weight: bold;
+            display: block;
+            margin: 4px;
+        }
+        input, select{
+            width: 100%;
+            padding: 10px;
+            margin: 8px auto;
+            font-weight: 500;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.134);
+        }
+        select{
+            width: 520px;
+        }
+        option{
+            font-weight: 500;
+        }
+        button{
+            width: 200px;
+           background-color: rgb(255, 255, 255);
+            font-weight: bolder;
+            color: rgb(0, 0, 0);
+            padding: 10px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            display: block;
+            margin: 16px auto;
+        } 
+
+
+    </style>
+</head>
+<body>
+    <form action="https://github.com/CodeWithHarry" onsubmit="return validation()">
+        <h2>Registration Form</h2>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" >
+        <span id="name-error" style="color: red;"></span>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" >
+        <span id="email-error" style="color: red;"></span>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" >
+        <span id="pass-error" style="color: red;"></span>
+
+        <label for="confirm-password">Confirm Password:</label>
+        <input type="password" id="confirm-password" name="confirm-password" >
+        <span id="cpass-error" style="color: red;"></span>
+
+        <label for="tel">Phone Number</label>
+        <input type="tel" id="tel" name="tel" >
+        <span id="tel-error" style="color: red;"></span>
+        
+        
+        <select name="gender" id="gender">
+            <option value="">--Select Your Gender--</option>
+            <option value="male" >Male</option>
+            <option value="female" >Female</option>
+        </select>
+
+        <button type="submit">Register</button>
+    </form>
+
+    <script>
+        function validation() {
+           let name = document.getElementById("name").value;
+           if( name == "") {
+                document.getElementById("name-error").innerText = "*Name is required";
+                document.getElementById("name-error").style.display = "block";
+                document.getElementById("name").style.border = "1px solid red";
+                return false;
+            }
+            else if(name.search(/^[a-zA-Z]+$/) == -1) {
+                document.getElementById("name-error").innerText = "*Name must be valid";
+                document.getElementById("name-error").style.display = "block";
+                document.getElementById("name").style.border = "1px solid red";
+                return false;
+            } else {
+                document.getElementById("name-error").style.display = "none";
+                document.getElementById("name").style.border = "1px solid #ccc";
+            }
+
+
+            let email = document.getElementById("email").value;
+            if(email == "") {
+                document.getElementById("email-error").innerText = "*Email is required";
+                document.getElementById("email-error").style.display = "block";
+                document.getElementById("email").style.border = "1px solid red";
+                return false;
+            }else {
+                document.getElementById("email-error").style.display = "none";
+                document.getElementById("email").style.border = "1px solid #ccc";
+            }
+
+
+            let password = document.getElementById("password").value;
+            if(password == "") {
+                document.getElementById("pass-error").innerText = "*Password is required";
+                document.getElementById("pass-error").style.display = "block";
+                document.getElementById("password").style.border = "1px solid red";
+                return false;
+            }
+            else if(password.length < 6) {
+                document.getElementById("pass-error").innerText = "*Password must be at least 6 characters";
+                document.getElementById("pass-error").style.display = "block";
+                document.getElementById("password").style.border = "1px solid red";
+                return false;
+            } else {
+                document.getElementById("pass-error").style.display = "none";
+                document.getElementById("password").style.border = "1px solid #ccc";
+            }
+
+            let confirmPassword = document.getElementById("confirm-password").value;
+            if(confirmPassword == "") {
+                 document.getElementById("cpass-error").innerText = "*confirm-Password is required";
+                document.getElementById("cpass-error").style.display = "block";
+                document.getElementById("confirm-password").style.border = "1px solid red";
+                return false;
+            }
+            else if(confirmPassword != password) {
+                document.getElementById("cpass-error").innerText = "*confirm-Password must match Password";
+                document.getElementById("cpass-error").style.display = "block";
+                document.getElementById("confirm-password").style.border = "1px solid red";
+                return false;
+            } else {
+                document.getElementById("cpass-error").style.display = "none";
+                document.getElementById("confirm-password").style.border = "1px solid #ccc";
+            }
+
+
+            let tel = document.getElementById("tel").value;
+            if(tel == "") {
+                document.getElementById("tel-error").innerText = "*Phone Number is required";
+                document.getElementById("tel-error").style.display = "block";
+                document.getElementById("tel").style.border = "1px solid red";
+                
+                return false;
+            }
+            else if(tel.search(/^\d{10}$/)== -1) {
+                document.getElementById("tel-error").innerText = "*Phone Number must be 10 digits";
+                document.getElementById("tel-error").style.display = "block";
+                document.getElementById("tel").style.border = "1px solid red";
+                return false;
+            } else {
+                document.getElementById("tel-error").style.display = "none";
+                document.getElementById("tel").style.border = "1px solid #ccc";
+            }
+
+        }
+    </script>
+</body>
+</html>
