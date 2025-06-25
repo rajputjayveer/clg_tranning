@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // // print numbers from 1 to 100 using a loop
+        // for (let i = 1; i <= 100; i++) {
+        //     console.log(i);
+        // }
+
+
+        // // check if a number is even or odd
+        // let input = prompt("Enter a number:");
+        // let number = parseInt(input);
+
+        // if (isNaN(number)) {
+        //     console.log("Please enter a valid number.");
+        // } else {
+        //     if (number % 2 === 0) {
+        //         console.log(`${number} is even.`);
+        //     } else {
+        //         console.log(`${number} is odd.`);
+        //     }
+        // }
+
+        // //Reverse a string
+        // let str = prompt("Enter a string:");
+        // let reversedStr = "";
+        // for (let i = str.length-1; i>=0; i--) {
+        //     reversedStr += str[i];
+        // }
+        // console.log(`Reversed string: ${reversedStr}`);
+
+
+        // // count a vowel in a string
+        // function countVowels(str) {
+        //     let count = 0;
+        //     const vowels = "aeiouAEIOU";
+        //     for (let char of str) {
+        //         if (vowels.includes(char)) {
+        //             count++;
+        //         }
+        //     }
+        //     return count;
+        // }
+        // console.log(countVowels("Hello World"));
+
+
+        // //find the largest number in an array
+        // function findLargestNumber(arr) {
+        //     let largest = arr[0];
+        //     for (let num of arr) {
+        //         if (num > largest) {
+        //             largest = num;
+        //         }
+        //     }
+        //     return largest;
+        // }
+        // console.log(findLargestNumber([3, 5, 7, 2, 8, -1]));
+
+        // // check if a string is a palindrome
+        // function isPalindrome(str) {
+        //     let cleaned = str.toLowerCase().replace(/[^a-z0-9]/g, '');
+        //     let reversed = cleaned.split('').reverse().join('');
+        //     return cleaned === reversed;
+        // }
+        // console.log(isPalindrome("A man, a plan, a canal, Panama!")); // true
+
+        // generate a random number between 1 and 100
+        let randomNumber = Math.floor(Math.random()*100)+1;
+        alert("your random number is: "+randomNumber);
+    </script>
+</body>
+
+</html>
