@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+
+ {% block content %}
+
+  <div class="page-heading header-text">
+    <div class="container">
+      <span class="breadcrumb"><a href="#">Home</a> / User Login</span>
+      <h3>User Login</h3>
+    </div>
+  </div>
+
+  <div class="container my-5">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="mb-4 text-center">
+          <h6 class="text-muted">| Login</h6>
+          <h2>Please Enter Your Credentials</h2>
+        </div>
+
+        <form action="#" method="post" id="login-form">
+            {% csrf_token %}
+          <div class="mb-3">
+            <label for="username" class="form-label">Username</label>
+            <input type="text" name="username" id="username" class="form-control" placeholder="Your Username..." required>
+          </div>
+
+          <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" name="password" id="password" class="form-control" placeholder="Your Password..." required>
+          </div>
+
+          <div class="d-grid">
+            <button type="submit" id="login-submit" class="orange-button">Login</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+ {% endblock content %}
