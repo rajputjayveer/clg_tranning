@@ -1,1 +1,1 @@
-# clg_tranning
+#  OJT tranning
